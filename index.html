@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+      <style>
+          .container {
+              display: flex; 
+              align-items: center; 
+          }
+          .container img {
+              width: 500px;
+              height: auto; 
+            
+          }
+          .container p {
+              font-size: 18px; 
+            
+          }
+  
+          body{
+  
+              background-image: url("data:image/jpeg;base64,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");
+              background-size: cover;
+          }
+  
+          h1 {
+  
+              font-family: 'Times New Roman', Times, serif;
+          }
+  
+          p {
+  
+              font-family: 'Times New Roman', Times, serif;
+              text-align:left;
+          }
+          
+          .h1{
+              color: black;
+          }
+  
+  
+  
+         
+      </style>
+  </head>
+  <body>
+     
+          
+              <h1 align="center">Royal Enfield Continental GT 650</h1>
+         
+          
+  
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                 <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20240627021036_GT%20650.jpg" width="500" height="333">
+             </div>
+             
+             <div class="col-sm-6">
+                  <p >The GT 650 showcases Royal Enfield's legendary parallel twin-cylinder engine, backed with an air/oil-cooled parallel twin configuration. The 648cc engine offers 47 horsepower at 7150 RPM and a maximum of 52 Nm of torque at 5250 RPM.</p>
+             </div>
+  
+          </div>
+      </div>      
+  
+  
+  <p></p>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                 <img src="c" width="500" height="333">
+             </div>
+             
+             <div class="col-sm-6">
+                  <p >The GT 650 showcases Royal Enfield's legendary parallel twin-cylinder engine, backed with an air/oil-cooled parallel twin configuration. The 648cc engine offers 47 horsepower at 7150 RPM and a maximum of 52 Nm of torque at 5250 RPM.</p>
+             </div>
+  
+          </div>
+      </div>      
+  
+  <p></p>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                 <img src="data:image/jpeg;base64,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" width="500" height="333">
+             </div>
+             
+             <div class="col-sm-6">
+                  <p>The Royal Enfield Continental GT 650 can reach a top speed of around 160 to 170 kmph. The bike has a top cruising speed of 120 kmph.</p>
+             </div>
+  
+          </div>
+      </div>     
+  
+  <p></p>
+  
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                 <img src="https://imgd.aeplcdn.com/1056x594/n/jraqseb_1777231.jpg?q=80" width="500" height="333">
+             </div>
+             
+             <div class="col-sm-6">
+                  <p>The Royal Enfield Continental GT 650 can reach a top speed of around 160 to 170 kmph. The bike has a top cruising speed of 120 kmph.</p>
+             </div>
+  
+          </div>
+      </div>     
+  
+  
+  
+  
+  
+  </body>
+  </html>
